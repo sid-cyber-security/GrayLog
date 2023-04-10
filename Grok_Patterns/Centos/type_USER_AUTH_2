@@ -1,0 +1,1 @@
+type=%{WORD:Type} msg=audit\(%{DATA:time_stamp_ID}\): pid=%{BASE10NUM:pid} uid=%{BASE10NUM:uid} auid=%{BASE10NUM:auid} ses=%{BASE10NUM:session_id} msg=%{GREEDYDATA:msg} grantors=%{WORD:grantors} acct="%{DATA:username}" exe="%{DATA:Path_executable_file}" hostname=%{GREEDYDATA:hostname} addr=%{IPV4:IP_address} terminal=%{WORD:terminal} res=%{WORD:result}
