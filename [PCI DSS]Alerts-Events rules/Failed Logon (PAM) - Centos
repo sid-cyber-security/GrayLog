@@ -1,0 +1,17 @@
+Filter & Aggregation
+Type
+Aggregation
+Search Query
+Path_executable_file:"/usr/bin/login" AND result:failed AND Type:USER_AUTH
+Streams
+All messages
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+username, filebeat_agent_name
+Create Events if
+count(username) >= 4
