@@ -1,0 +1,1 @@
+type=%{WORD:Type} msg=audit\(%{DATA:time_stamp_ID}\): proctitle=%{GREEDYDATA:proctitle}
