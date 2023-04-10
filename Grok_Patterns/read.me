@@ -5,3 +5,6 @@ This is because I add a label to specific events using auditd rules.
 So don't forget to add the rules to /etc/audit/rules.d first.
 Restart the auditd daemon and check if the rules have been applied with the command "auditctl -l".
 You can go back to the auditd.rules folder and see them in my github)
+I also encountered the problem that type=USER_CMD events do not appear under the root user.
+To do this, you need to add a rule to pam.d. be sure to check it out.
+
