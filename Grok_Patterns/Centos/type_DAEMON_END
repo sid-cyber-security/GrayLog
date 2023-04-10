@@ -1,0 +1,1 @@
+type=%{WORD:Type} msg=audit\(%{DATA:time_stamp_ID}\): op=%{GREEDYDATA:op} auid=%{BASE10NUM:auid} pid=%{BASE10NUM:pid} subj=%{GREEDYDATA:SELinux} res=%{WORD:result}
