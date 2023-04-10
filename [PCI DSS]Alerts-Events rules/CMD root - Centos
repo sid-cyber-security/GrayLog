@@ -1,0 +1,16 @@
+Type
+Aggregation
+Search Query
+Type:"USER_TTY"
+Streams
+All messages
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+filebeat_agent_name, auid, uid, terminal_root_decoded
+Create Events if
+count(uid) == 1
