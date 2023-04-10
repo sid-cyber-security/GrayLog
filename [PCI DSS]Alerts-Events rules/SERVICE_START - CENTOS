@@ -1,0 +1,16 @@
+Type
+Aggregation
+Search Query
+Type:"SERVICE_START"
+Streams
+All messages
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+filebeat_agent_name, auid, uid, result, unit
+Create Events if
+count(unit) == 1
