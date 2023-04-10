@@ -1,0 +1,1 @@
+session required pam_tty_audit.so enable=root
