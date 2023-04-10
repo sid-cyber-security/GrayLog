@@ -1,0 +1,53 @@
+rule "centos rule"
+when 
+    has_field("message")
+then
+
+    let message_field = to_string($message.message);
+    
+    
+    let centos_user_auth1 = grok("%{Centos_type_USER_AUTH}", to_string($message.message), true);
+    let centos_user_auth2 = grok("%{Centos_type_USER_AUTH_2}", to_string($message.message), true);
+    let centos_user_auth3 = grok("%{Centos_type_USER_AUTH_3}", to_string($message.message), true);
+    let centos_user_auth4 = grok("%{Centos_type_USER_AUTH_4}", to_string($message.message), true);
+    let centos_user_auth5 = grok("%{Centos_type_USER_AUTH_5}", to_string($message.message), true);
+    let centos_user_auth6 = grok("%{Centos_type_USER_AUTH_6}", to_string($message.message), true);
+    let centos_user_auth7 = grok("%{Centos_type_USER_AUTH_7}", to_string($message.message), true);
+    let centos_syscall1 = grok("%{Centos_type_SYSCALL}", to_string($message.message), true);
+    let centos_syscall2 = grok("%{Centos_type_SYSCALL_2}", to_string($message.message), true);
+    let centos_syscall3 = grok("%{Centos_type_SYSCALL_3}", to_string($message.message), true);
+    let centos_service_stop = grok("%{Centos_type_SERVICE_STOP}", to_string($message.message), true);
+    let centos_service_stop2 = grok("%{Centos_type_SERVICE_STOP_2}", to_string($message.message), true);
+    let centos_daemon_end = grok("%{Centos_type_DAEMON_END}", to_string($message.message), true);
+    let centos_daemon_start = grok("%{Centos_type_DAEMON_START}", to_string($message.message), true);
+    let centos_user_cmd = grok("%{Centos_type_USER_CMD}", to_string($message.message), true);
+    let centos_user_cmd2 = grok("%{Centos_type_USER_CMD_2}", to_string($message.message), true);
+    let centos_user_tty = grok("%{Centos_type_USER_TTY}", to_string($message.message), true);
+    let centos_proctitle = grok("%{Centos_type_PROCTITLE}", to_string($message.message), true);
+    
+
+
+    set_fields(centos_user_auth1);
+    set_fields(centos_user_auth2);
+    set_fields(centos_user_auth3);
+    set_fields(centos_user_auth4);
+    set_fields(centos_user_auth5);
+    set_fields(centos_user_auth6);
+    set_fields(centos_user_auth7);
+    set_fields(centos_syscall1);
+    set_fields(centos_syscall2);
+    set_fields(centos_syscall3);
+    set_fields(centos_service_stop);
+    set_fields(centos_service_stop2);
+    set_fields(centos_daemon_end);
+    set_fields(centos_daemon_start);
+    set_fields(centos_user_cmd);
+    set_fields(centos_user_cmd2);
+    set_fields(centos_user_tty);
+    set_fields(centos_proctitle);
+    set_field("cmd_decoded", base16_decode(to_string($message.cmd)));
+    set_field("terminal_root_decoded", base16_decode(to_string($message.terminal_root)));
+    set_field("proctitle_decoded", base16_decode(to_string($message.proctitle)));
+    
+    
+end
