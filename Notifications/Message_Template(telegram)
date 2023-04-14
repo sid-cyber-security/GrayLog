@@ -1,0 +1,15 @@
+<b>${event.message}</b>${if event.timerange_start}
+Alert: ${event.alert}
+Timerange: ${event.timerange_start} to ${event.timerange_end}${end}${if streams}
+Priority: ${event.priority}
+Streams:${foreach streams stream} <a href='${stream.url}'>${stream.title}</a>${end}${end}
+Fields:
+${foreach event.fields field}${field.key}: ${field.value}
+${end}
+${if backlog}
+---[Backlog]-----------------------------------------
+Last messages accounting for this alert:
+${foreach backlog message}
+${message.timestamp} :: ${message.source} :: ${message.message} 
+${message.message} 
+${end}${end}
