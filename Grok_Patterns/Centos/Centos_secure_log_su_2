@@ -1,0 +1,1 @@
+%{WORD:Date} %{BASE10NUM:Date} %{DATA:Date} %{GREEDYDATA:Hostname} %{WORD:Tools}: %{GREEDYDATA:PAM}: %{GREEDYDATA:result} for user %{GREEDYDATA:user} by %{GREEDYDATA:by}
