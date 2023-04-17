@@ -1,0 +1,16 @@
+Type
+Aggregation
+Search Query
+Tools:"sudo"
+Streams
+All messages
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+Hostname, Tools, Username_Auth, USER, PWD, COMMAND
+Create Events if
+count(Tools) == 1
