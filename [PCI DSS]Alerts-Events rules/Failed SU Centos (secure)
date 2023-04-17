@@ -1,0 +1,24 @@
+Details
+Title
+Failed SU Centos (secure)
+Description
+SU from secure log
+Priority
+High
+Filter & Aggregation
+Type
+Aggregation
+Search Query
+Tools:"su" AND result:"authentication failure"
+Streams
+All messages
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+filebeat_agent_name, Tools, logname, ruser, uid, user, result
+Create Events if
+count(Tools) >= 3
