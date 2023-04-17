@@ -1,0 +1,1 @@
+%{WORD:Date} %{BASE10NUM:Date} %{DATA:Date} %{GREEDYDATA:Hostname} %{WORD:Tools}: %{GREEDYDATA:PAM}: %{GREEDYDATA:result}; logname=%{GREEDYDATA:logname} uid=%{BASE10NUM:uid} euid=%{BASE10NUM:euid} tty=%{GREEDYDATA:tty} ruser=%{GREEDYDATA:ruser} rhost=%{GREEDYDATA:rhost} user=%{GREEDYDATA:user}
