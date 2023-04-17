@@ -26,6 +26,8 @@ then
     let centos_proctitle = grok("%{Centos_type_PROCTITLE}", to_string($message.message), true);
     let centos_secure = grok("%{Centos_secure_log_sudo_cmd}", to_string($message.message), true);
     let centos_secure2 = grok("%{Centos_secure_log_sudo_cmd_2}", to_string($message.message), true);
+    let centos_secure3 = grok("%{Centos_secure_log_su}", to_string($message.message), true);
+    let centos_secure4 = grok("%{Centos_secure_log_su_2}", to_string($message.message), true);
     
 
 
@@ -49,9 +51,12 @@ then
     set_fields(centos_proctitle);
     set_fields(centos_secure);
     set_fields(centos_secure2);
+    set_fields(centos_secure3);
+    set_fields(centos_secure4);
     set_field("cmd_decoded", base16_decode(to_string($message.cmd)));
     set_field("terminal_root_decoded", base16_decode(to_string($message.terminal_root)));
     set_field("proctitle_decoded", base16_decode(to_string($message.proctitle)));
     
     
 end
+
