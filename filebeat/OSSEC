@@ -12,7 +12,7 @@ filebeat.inputs:
   multiline.type: pattern       //This is so that there is no division into several messages in GrayLog
   multiline.pattern: '^\['      //By default, one log with OSSEC turns into 4 or more different messages
   multiline.negate: true        //These lines will help to convert into a single log message.
-  multiline.match: after        //Thanks to Ilya =)
+  multiline.match: after        //Thanks to Ilya Kalashnikov =)
 output.logstash:
    hosts: ["100.108.16.5:5046"]
 path:
