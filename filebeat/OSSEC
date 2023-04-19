@@ -1,0 +1,20 @@
+# Needed for Graylog
+fields_under_root: true
+fields.collector_node_id: ${sidecar.nodeName}
+fields.gl2_source_collector: ${sidecar.nodeId}
+
+filebeat.inputs:
+- input_type: log
+  paths:
+    - /var/ossec/logs/*.log
+    - /var/ossec/logs/alerts/*.log
+  type: log
+  multiline.type: pattern       //This is so that there is no division into several messages in GrayLog
+  multiline.pattern: '^\['      //By default, one log with OSSEC turns into 4 or more different messages
+  multiline.negate: true        //These lines will help to convert into a single log message.
+  multiline.match: after        //Thanks to Ilya =)
+output.logstash:
+   hosts: ["100.108.16.5:5046"]
+path:
+  data: /var/lib/graylog-sidecar/collectors/filebeat/data
+  logs: /var/lib/graylog-sidecar/collectors/filebeat/log
