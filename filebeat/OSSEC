@@ -14,7 +14,7 @@ filebeat.inputs:
   multiline.negate: true        //These lines will help to convert into a single log message.
   multiline.match: after        //Thanks to Ilya Kalashnikov =)
 output.logstash:
-   hosts: ["100.108.16.5:5046"]
+   hosts: ["192.168.1.0:6666"]  //Your address and port
 path:
   data: /var/lib/graylog-sidecar/collectors/filebeat/data
   logs: /var/lib/graylog-sidecar/collectors/filebeat/log
