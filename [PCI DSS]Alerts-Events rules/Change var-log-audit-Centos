@@ -3,7 +3,7 @@ Aggregation
 Search Query
 Type:"SYSCALL" AND key:"modification-audit" AND NOT auid:"4294967295" AND NOT comm:"auditd"
 Streams
-All messages
+Linux servers
 Search within
 1 minutes
 Execute search every
