@@ -1,0 +1,9 @@
+%{GREEDYDATA:UNWANT}: mail  - %{GREEDYDATA:mail}
+%{BASE10NUM:Date} %{WORD:Date} %{BASE10NUM:Date} %{DATA:Date}\s\(%{GREEDYDATA:hostname}\)\s%{IPV4:ip_addr}->%{WORD:Tools}
+Rule: %{BASE10NUM:Rule}\s\(level\s{1}%{BASE10NUM:level}\)\s->\s'%{GREEDYDATA:Name_rule}'
+Integrity checksum changed for:\s'%{GREEDYDATA:What_change}'
+Size changed from '%{BASE10NUM:Size_old}' to '%{BASE10NUM:Size_new}'
+Old md5sum was:%{SPACE}'%{GREEDYDATA:Old_md5sum}'
+New md5sum is :%{SPACE}'%{GREEDYDATA:New_md5sum}'
+Old sha1sum was:%{SPACE}'%{GREEDYDATA:Old_sha1sum}'
+New sha1sum is :%{SPACE}'%{GREEDYDATA:New_sha1sum'}
