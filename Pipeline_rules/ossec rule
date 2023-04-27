@@ -1,0 +1,21 @@
+rule "ossec rule"
+when 
+    has_field("message")
+then
+
+    let message_field = to_string($message.message);
+    
+    
+    let ossec_cheksum = grok("%{ossec_checksum}", to_string($message.message), true);
+    let ossec_cheksum_2 = grok("%{ossec_checksum_2}", to_string($message.message), true);
+    let ossec_cheksum_3 = grok("%{ossec_checksum_3}", to_string($message.message), true);
+    
+    
+    
+    set_fields(ossec_cheksum);
+    set_fields(ossec_cheksum_2);
+    set_fields(ossec_cheksum_3);
+    
+    
+    
+end
