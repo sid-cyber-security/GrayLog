@@ -3,7 +3,7 @@ Aggregation
 Search Query
 Type:"USER_AUTH" AND Path_executable_file:"/usr/bin/su" AND result:"success"
 Streams
-All messages
+Linux servers
 Search within
 1 minutes
 Execute search every
