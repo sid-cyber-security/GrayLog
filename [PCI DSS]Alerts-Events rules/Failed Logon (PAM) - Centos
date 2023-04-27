@@ -4,7 +4,7 @@ Aggregation
 Search Query
 Path_executable_file:"/usr/bin/login" AND result:failed AND Type:USER_AUTH
 Streams
-All messages
+Linux servers
 Search within
 1 minutes
 Execute search every
