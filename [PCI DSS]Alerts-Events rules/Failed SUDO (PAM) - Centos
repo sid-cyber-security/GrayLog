@@ -3,7 +3,7 @@ Aggregation
 Search Query
 Type:"USER_AUTH" AND Path_executable_file:"/usr/bin/sudo" AND result:"failed"
 Streams
-All messages
+Linux servers
 Search within
 1 minutes
 Execute search every
