@@ -3,7 +3,7 @@ Aggregation
 Search Query
 result:"failed" AND Type:USER_AUTH AND Path_executable_file:"/usr/sbin/sshd"
 Streams
-All messages
+Linux servers
 Search within
 1 minutes
 Execute search every
