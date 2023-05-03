@@ -1,0 +1,16 @@
+Type
+Aggregation
+Search Query
+Name_rule:"Integrity checksum changed."
+Streams
+OSSEC stream
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+Name_rule, Rule, Tools, What_change, hostname, ip_addr
+Create Events if
+count(Name_rule) == 1
