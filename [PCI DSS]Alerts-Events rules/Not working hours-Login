@@ -1,0 +1,16 @@
+Type
+Aggregation
+Search Query
+Name_rule:"Login session opened." AND (time_plus_5_hours:["19:00:00" TO "23:59:59"] OR time_plus_5_hours:["00:00:00" TO "08:30:00"])
+Streams
+OSSEC stream
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+Name_rule, Rule, Tools, hostname, ip_addr, time_plus_5_hours
+Create Events if
+count(Name_rule) == 1
