@@ -1,0 +1,11 @@
+rule "extract_time_from_timestamp"
+when
+    has_field("timestamp")
+then
+    let time_string = regex("^\\d{4}-\\d{2}-\\d{2}T([\\d:]+)\\.\\d+\\S+", to_string($message.timestamp));
+    let parsed_time = parse_date(to_string(time_string["0"]), "HH:mm:ss");
+    let time_plus_5_hours = parsed_time + hours(5);                   //In my case it was necessary to add +5 hours.
+    let adjusted_time = format_date(time_plus_5_hours, "HH:mm:ss");   //If you are satisfied with the time that time only outputs, then these lines are not needed.
+    set_field("time_only", time_string["0"]);
+    set_field("time_plus_5_hours", adjusted_time);                    //and this
+end
