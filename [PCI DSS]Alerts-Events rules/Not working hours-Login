@@ -11,6 +11,6 @@ Execute search every
 Enable scheduling
 yes
 Group by Field(s)
-Name_rule, Rule, Tools, hostname, ip_addr, time_plus_5_hours
+Name_rule, Rule, Tools, hostname, ip_addr, time_plus_5_hours, info
 Create Events if
 count(Name_rule) == 1
