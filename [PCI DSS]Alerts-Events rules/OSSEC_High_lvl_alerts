@@ -1,0 +1,16 @@
+Type
+Aggregation
+Search Query
+message:"level 7" OR message:"level 8" OR message:"level 9" OR message:"level 10" OR message:"level 11" OR message:"level 12" OR message:"level 13" OR message:"level 14" OR message:"level 15"
+Streams
+OSSEC stream
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
+Group by Field(s)
+No Group by configured
+Create Events if
+count(message) == 1
