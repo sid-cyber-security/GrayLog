@@ -9,12 +9,18 @@ then
     let ossec_cheksum = grok("%{ossec_checksum}", to_string($message.message), true);
     let ossec_cheksum_2 = grok("%{ossec_checksum_2}", to_string($message.message), true);
     let ossec_cheksum_3 = grok("%{ossec_checksum_3}", to_string($message.message), true);
+    let ossec_login = grok("%{ossec_login_session}", to_string($message.message), true);
+    let ossec_login_2 = grok("%{ossec_login_session_2}", to_string($message.message), true);
+    let ossec_file_added = grok("%{ossec_file_added}", to_string($message.message), true);
     
     
     
     set_fields(ossec_cheksum);
     set_fields(ossec_cheksum_2);
     set_fields(ossec_cheksum_3);
+    set_fields(ossec_login);
+    set_fields(ossec_login_2);
+    set_fields(ossec_file_added);
     
     
     
