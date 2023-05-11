@@ -1,0 +1,12 @@
+Type
+Filter
+Search Query
+Name_rule:"File added to the system"
+Streams
+OSSEC stream
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
