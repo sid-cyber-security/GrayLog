@@ -1,0 +1,4 @@
+%{GREEDYDATA:UNWANT}: - %{GREEDYDATA:mail}
+%{BASE10NUM:Date} %{WORD:Date} %{BASE10NUM:Date} %{DATA:Date} \(%{GREEDYDATA:hostname}\) %{IPV4:ip_addr}->%{WORD:Tools}
+Rule: %{BASE10NUM:Rule} \(%{GREEDYDATA:level}\) -> %{GREEDYDATA:Name_rule}
+File %{GREEDYDATA:Whats file}
