@@ -1,0 +1,4 @@
+%{GREEDYDATA:UNWANT} Alert %{GREEDYDATA:UNWANT}: - %{GREEDYDATA:UNWANT}
+%{BASE10NUM:Date} %{WORD:Date} %{BASE10NUM:Date} %{DATA:Date}\s\(%{GREEDYDATA:hostname}\)\s%{IPV4:ip_addr}->%{GREEDYDATA:Path_log}
+Rule: %{BASE10NUM:Rule}\s\(level\s{1}%{BASE10NUM:level}\)\s->\s'%{GREEDYDATA:Name_rule}'
+%{WORD:Date_uz} %{BASE10NUM:Date_uz} %{DATA:Date_uz} %{GREEDYDATA:UNWANT}: %{GREEDYDATA:Tools}: %{GREEDYDATA:info}
