@@ -1,0 +1,12 @@
+Type
+Filter
+Search Query
+info:"Agent disconnected"
+Streams
+OSSEC stream
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
