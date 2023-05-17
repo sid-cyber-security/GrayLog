@@ -12,6 +12,8 @@ then
     let ossec_login = grok("%{ossec_login_session}", to_string($message.message), true);
     let ossec_login_2 = grok("%{ossec_login_session_2}", to_string($message.message), true);
     let ossec_file_added = grok("%{ossec_file_added}", to_string($message.message), true);
+    let ossec_disconnect = grok("%{ossec_disconnect_agent}", to_string($message.message), true);
+    let ossec_disconnect_2 = grok("%{ossec_disconnect_agent_2}", to_string($message.message), true);
     
     
     
@@ -21,6 +23,8 @@ then
     set_fields(ossec_login);
     set_fields(ossec_login_2);
     set_fields(ossec_file_added);
+    set_fields(ossec_disconnect);
+    set_fields(ossec_disconnect_2);
     
     
     
