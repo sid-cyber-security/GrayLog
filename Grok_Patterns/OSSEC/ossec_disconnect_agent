@@ -1,0 +1,4 @@
+%{GREEDYDATA:UNWANT}: mail  - %{GREEDYDATA:mail}
+%{BASE10NUM:Date} %{WORD:Date} %{BASE10NUM:Date} %{DATA:Date} %{GREEDYDATA:hostname}->%{GREEDYDATA:Tools}
+Rule: %{BASE10NUM:Rule} \(%{GREEDYDATA:level}\) -> %{GREEDYDATA:Name_rule}
+ossec: %{GREEDYDATA:info}
