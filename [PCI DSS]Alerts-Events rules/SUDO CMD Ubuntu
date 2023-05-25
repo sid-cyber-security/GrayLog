@@ -1,0 +1,12 @@
+Type
+Filter
+Search Query
+Tools:"sudo" AND message:"/var/log/auth.log" AND COMMAND:*
+Streams
+OSSEC stream
+Search within
+1 minutes
+Execute search every
+1 minutes
+Enable scheduling
+yes
